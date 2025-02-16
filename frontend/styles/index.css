@@ -1,84 +1,44 @@
-:root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #d64045;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--body-background);
-  color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
-  line-height: 1.5;
+  @apply bg-gray-50 text-black my-6 leading-normal;
 }
 
 a {
-  color: var(--action-color);
-  text-decoration: underline;
+  @apply underline text-red-600;
   text-decoration-color: #ffb088;
 }
 
 h1 {
-  margin: 1rem 0 3rem;
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: var(--heading-color);
-  line-height: 1.2;
+  @apply mt-4 mx-0 mb-10 text-center font-black text-[2.5rem] text-black leading-5;
 }
 
 body > header {
-  margin: 1rem;
-  text-align: center;
+  @apply m-4 text-center
 }
 
 body > header img {
-  display: inline-block;
-  width: 400px;
-  max-width: 100%;
+  @apply block mx-auto w-[400px] max-w-full;
 }
 
 body > nav ul {
-  margin: 2rem 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: bold;
+  @apply my-8 mx-0 p-0 list-none flex justify-center gap-6 text-[1.3rem] font-bold;
 }
 
 body > nav a {
-  text-decoration: none;
+  @apply no-underline;
 }
 
 main {
-  margin: 2rem auto 4rem;
-  max-width: 65rem;
-  min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
-
-  @media (max-width: 500px) {
-    padding: 16px 16px 50px;
-  }
+  @apply mt-4 mx-auto mb-16 md:pt-[25px] md:px-[25px] pb-[50px] pt-[16px] px-[16px] max-w-[65rem] bg-white shadow-md rounded-sm;
 }
 
 footer {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1em;
+  @apply mb-16 text-center text-base;
 }
 
 hr {
-  border: none;
-  border-top: 2px dotted #bbb;
-  margin: 3rem 0;
+  @apply my-12 mx-0 border-t border-dotted border-gray-300;
 }
