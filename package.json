@@ -15,5 +15,10 @@
     "postcss-load-config": "^4.0.1",
     "postcss-preset-env": "^9.1.2",
     "read-cache": "^1.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "tailwindcss": "^3.4.13"
   }
 }
